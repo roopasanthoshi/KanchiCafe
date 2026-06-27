@@ -3,11 +3,6 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "installCommand": "npm install",
-  "functions": {
-    "api/**/*.js": {
-      "runtime": "nodejs20.x"
-    }
-  },
   "rewrites": [
     { "source": "/api/admin/dashboard", "destination": "/api/admin/dashboard" },
     { "source": "/api/admin/categories", "destination": "/api/admin/categories" },
