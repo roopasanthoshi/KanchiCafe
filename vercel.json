@@ -1,0 +1,44 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "installCommand": "npm install",
+  "functions": {
+    "api/**/*.js": {
+      "runtime": "nodejs20.x"
+    }
+  },
+  "rewrites": [
+    { "source": "/api/admin/dashboard", "destination": "/api/admin/dashboard" },
+    { "source": "/api/admin/categories", "destination": "/api/admin/categories" },
+    { "source": "/api/admin/categories/:id", "destination": "/api/admin/categories/[id]" },
+    { "source": "/api/admin/menu", "destination": "/api/admin/menu/index" },
+    { "source": "/api/admin/menu/:id", "destination": "/api/admin/menu/[id]" },
+    { "source": "/api/admin/tables", "destination": "/api/admin/tables/index" },
+    { "source": "/api/admin/tables/:table_number", "destination": "/api/admin/tables/[table_number]" },
+    { "source": "/api/admin/orders", "destination": "/api/admin/orders/index" },
+    { "source": "/api/admin/orders/:id/status", "destination": "/api/admin/orders/[id]/status" },
+    { "source": "/api/admin/orders/:id/approve", "destination": "/api/admin/orders/[id]/approve" },
+    { "source": "/api/admin/orders/:id/reject", "destination": "/api/admin/orders/[id]/reject" },
+    { "source": "/api/admin/approvals", "destination": "/api/admin/approvals/index" },
+    { "source": "/api/admin/reviews", "destination": "/api/admin/reviews/index" },
+    { "source": "/api/admin/reviews/:id", "destination": "/api/admin/reviews/[id]" },
+    { "source": "/api/admin/reports", "destination": "/api/admin/reports" },
+    { "source": "/api/admin/settings", "destination": "/api/admin/settings/index" },
+    { "source": "/api/admin/settings/cafe", "destination": "/api/admin/settings/cafe" },
+    { "source": "/api/admin/settings/printer", "destination": "/api/admin/settings/printer" },
+    { "source": "/api/admin/settings/printer/test", "destination": "/api/admin/settings/printer-test" },
+    { "source": "/api/admin/auth/login", "destination": "/api/admin/auth/login" },
+    { "source": "/api/admin/users", "destination": "/api/admin/users/index" },
+    { "source": "/api/admin/users/:id", "destination": "/api/admin/users/[id]" },
+    { "source": "/api/admin/notifications", "destination": "/api/admin/notifications" },
+    { "source": "/api/customer/menu", "destination": "/api/customer/menu" },
+    { "source": "/api/customer/orders", "destination": "/api/customer/orders/index" },
+    { "source": "/api/customer/orders/:id", "destination": "/api/customer/orders/[id]" },
+    { "source": "/api/customer/orders/:id/edit", "destination": "/api/customer/orders/[id]/edit" },
+    { "source": "/api/customer/orders/:id/cancel", "destination": "/api/customer/orders/[id]/cancel" },
+    { "source": "/api/customer/orders/:id/pay", "destination": "/api/customer/orders/[id]/pay" },
+    { "source": "/api/customer/reviews", "destination": "/api/customer/reviews" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
